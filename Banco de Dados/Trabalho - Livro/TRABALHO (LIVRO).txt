@@ -1,0 +1,95 @@
+
+GRUPO 4 - DANIEL, LARISSA, LUIS, ERIC, RAFAEL SALMERON
+
+
+-------------------------------------------- CRIAÇÃO E INSERÇÃO DE TABELA -------------------------------------------------
+create table autor(id_autor serial primary key, nome varchar(60));
+
+create table livro(id_livro serial primary key, titulo varchar(60), id_autor int,
+foreign key(id_autor) references autor(id_autor) on delete cascade);
+
+create table usuario(id_usuario serial primary key, nome varchar(60), email varchar(90) unique);
+
+create table emprestimo(id_emprestimo int primary key, id_usuario int, id_livro int, 
+						foreign key(id_usuario) references usuario(id_usuario),
+						foreign key(id_livro) references livro(id_livro), data_emprestimo date, 
+						data_devolucao date, valor_emprestimo numeric);
+
+
+insert into autor (nome) values
+('J.K. Rowling'),
+('George R.R. Martin'),
+('J.R.R. Tolkien'),
+('Agatha Christie'),
+('Isaac Asimov');
+
+insert into livro (titulo, id_autor) values
+('Harry Potter and the Philosopher`s Stone', 1),
+('A Game of Thrones', 2),
+('The Lord of the Rings', 3),
+('Murder on the Orient Express', 4),
+('Foundation', 4),
+('Harry Potter and the Chamber of Secrets', 1);
+
+/*insert into usuario (nome, email) values 
+('João Silva', 'joao.silva@gmail.com'),
+('Maria Oliveira', 'maria.oliveira@gmail.com'),
+('Ana Souza', 'ana22@gmail.com'),
+('Carlos Pereira', 'carlos33@gmail.com'),
+('Paula Lima', 'paula44@gmail.com');
+
+insert into emprestimo(id_emprestimo, data_emprestimo, data_devolucao, valor_emprestimo, id_usuario, id_livro)
+values 
+(12,'2024-08-25', '2024-09-06', 15.00, 1, 1),
+(22,'2024-09-13', '2024-10-17', 20.00, 2, 2),
+(33,'2024-10-12', '2024-12-23', 25.00, 3, 3),
+(44,'2024-11-21', '2024-12-07', 30.00, 4, 4),
+(55,'2024-07-22', '2024-09-25', 35.00, 4, 5),
+(35,'2024-05-25', '2024-10-06', 15.00, 1, 2);
+
+
+
+
+
+
+------------------------------------------ QUERY´S / ATIVIDADE ----------------------------------------------
+
+
+1) Retornar os livros emprestados.
+
+//select l.titulo, u.nome, e.data_emprestimo,e.data_devolucao,e.valor_emprestimo from emprestimo e
+inner join livro l on e.id_livro = l.id_livro
+inner join usuario u on e.id_usuario = u.id_usuario//
+
+2) Retornar os livros que não foram emprestados.
+
+//select l.titulo from livro l
+left join emprestimo e on l.id_livro = e.id_livro where e.id_emprestimo is null;//
+
+3) Contar quantos livros foram emprestados.
+
+//select count(*) as livros_emprestados from emprestimo//
+
+4) A quantidade de livros que cada autor tem.
+
+//select a.nome, count(a.id_autor) as livros_publicados from livro l
+inner join autor a on l.id_autor = a.id_autor
+group by a.id_autor//
+
+5) Exibir os livros do mais caro ao mais barato em ordem.
+
+//select l.titulo, max(e.valor_emprestimo) from livro l 
+inner join emprestimo e on l.id_livro = e.id_livro
+group by l.titulo, e.valor_emprestimo
+order by e.valor_emprestimo desc;//
+
+6) Apagar um autor consequentemente seu livro deverá ser
+automaticamente apagado.
+
+//delete from autor where id_autor = 1//
+
+7) Mostra o total arrecado em empréstimo de um determinado livro
+
+//select l.titulo, sum(e.valor_emprestimo) as total_arrecadado from livro l 
+inner join emprestimo e on l.id_livro = e.id_livro
+where e.id_livro = 2 group by l.id_livro// 

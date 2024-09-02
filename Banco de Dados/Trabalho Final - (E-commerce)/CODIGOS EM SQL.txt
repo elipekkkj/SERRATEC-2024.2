@@ -1,0 +1,244 @@
+------------------------------------------ CRIAÇÃO E INSERÇÃO DE TABELA ---------------------------------------------------
+
+CREATE TABLE empresa (
+    id_empresa SERIAL PRIMARY KEY, 
+    cnpj CHAR(16), 
+    nome_empresa VARCHAR(40)
+);
+
+
+CREATE TABLE funcionario (
+    id_funcionario SERIAL PRIMARY KEY, 
+    cpf CHAR(11), 
+    nome_funcionario VARCHAR(60),
+    id_empresa INT,
+    FOREIGN KEY (id_empresa) REFERENCES empresa(id_empresa)
+);
+
+
+CREATE TABLE cliente (
+    id_cliente SERIAL PRIMARY KEY, 
+    nome_cliente VARCHAR(60), 
+    nome_usuario VARCHAR(20),
+    cpf CHAR(11),
+    data_nascimento DATE, 
+    email VARCHAR(70)
+);
+
+CREATE TABLE endereco (
+    id_endereco SERIAL PRIMARY KEY,
+    id_cliente INT,
+    endereco_completo VARCHAR(90),
+    observacoes TEXT,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+
+CREATE TABLE categoria (
+    id_categoria SERIAL PRIMARY KEY,
+    nome_categoria VARCHAR(60)
+);
+
+CREATE TABLE produto (
+    id_produto SERIAL PRIMARY KEY,	 
+    nome_produto VARCHAR(60), 
+    descricao VARCHAR(90), 
+    qtd_estoque INT,
+    data_fabricacao DATE DEFAULT CURRENT_DATE, 
+    valor_unitario NUMERIC,
+    id_categoria INT,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+);
+
+CREATE TABLE pedido (
+    id_pedido SERIAL PRIMARY KEY, 
+    data_realizacao DATE DEFAULT CURRENT_DATE,
+    id_cliente INT,
+    status VARCHAR(20) DEFAULT 'Pendente',
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+CREATE TABLE item_pedido (
+    id_item_pedido SERIAL PRIMARY KEY,
+    id_pedido INT,
+    id_produto INT,
+    quantidade INT,
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+);
+
+
+INSERT INTO empresa (cnpj, nome_empresa) VALUES 
+('12345678000195', 'Empresa Exemplo 1'),
+('12345678000276', 'Empresa Exemplo 2'),
+('12345678000357', 'Empresa Exemplo 3'),
+('12345678000438', 'Empresa Exemplo 4'),
+('12345678000519', 'Empresa Exemplo 5')
+
+INSERT INTO cliente (nome_cliente, nome_usuario, cpf, data_nascimento, email) VALUES 
+('Cliente 1', 'cliente1', '12345678901', '1990-01-01', 'cliente1@example.com'),
+('Cliente 2', 'cliente2', '23456789012', '1991-02-02', 'cliente2@example.com'),
+('Cliente 3', 'cliente3', '34567890123', '1992-03-03', 'cliente3@example.com'),
+('Cliente 4', 'cliente4', '45678901234', '1993-04-04', 'cliente4@example.com'),
+('Cliente 5', 'cliente5', '56789012345', '1994-05-05', 'cliente5@example.com');
+
+INSERT into endereco (id_cliente, endereco_completo, observacoes)
+VALUES
+(1, 'Rua Exempo 1, 123', 'Sem Observações'),
+(2, 'Rua Exempo 2, 456', 'Apartamento 101'),
+(3, 'Rua Exempo 3, 789', 'Casa'),
+(4, 'Rua Exempo 4, 101', 'Próximo ao Parque'),
+(5, 'Rua Exempo 5, 202', 'Em frente ao mercado');
+
+
+INSERT INTO categoria (nome_categoria) VALUES 
+('Categoria 1'),
+('Categoria 2'),
+('Categoria 3'),
+('Categoria 4'),
+('Categoria 5');
+
+INSERT INTO produto (nome_produto, descricao, qtd_estoque, valor_unitario, id_categoria)
+VALUES 
+('Produto 1', 'Descrição do Produto 1', 100, 29.99, 1),
+('Produto 2', 'Descrição do Produto 1', 100, 29.99, 2),
+('Produto 3', 'Descrição do Produto 1', 100, 29.99, 3),
+('Produto 4', 'Descrição do Produto 1', 100, 29.99, 4),
+('Produto 5', 'Descrição do Produto 1', 100, 29.99, 5);
+
+INSERT INTO pedido (id_cliente, status) VALUES 
+(1, 'Pendente'),
+(2, 'Processando'),
+(3, 'Enviado'),
+(4, 'Entregue'),
+(5, 'Pendente');
+
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade) VALUES 
+(1, 1, 10)
+(2, 3, 20)
+(3, 4, 15)
+(4, 2, 40)
+(5, 5, 24)
+
+create or replace function verificar_estoque() returns trigger as $$
+declare 
+	v_qtd_estoque int;
+begin
+	select qtd_estoque into v_qtd_estoque
+	from produto
+	where id_produto = new.id_produto;
+<<<<<<< HEAD
+
+
+
+=======
+	
+
+	
+>>>>>>> refs/remotes/origin/main
+	if v_qtd_estoque >= new.quantidade then
+		update produto
+		set qtd_estoque = qtd_estoque - new.quantidade
+		where id_produto = new.id_produto;
+<<<<<<< HEAD
+
+		update pedido
+		set status = 'Processando'
+		where id_pedido = new.id_pedido;
+
+	else
+
+=======
+		
+		update pedido
+		set status = 'Processando'
+		where id_pedido = new.id_pedido;
+		
+	else
+		
+>>>>>>> refs/remotes/origin/main
+		update pedido
+		set status = 'Cancelado'
+		where id_pedido = new.id_pedido;
+	end if;
+<<<<<<< HEAD
+
+=======
+	
+>>>>>>> refs/remotes/origin/main
+	return new;
+end;
+$$ language PLPGSQL;
+
+create trigger trigger_verificar_estoque
+after insert on item_pedido
+for each row
+execute function verificar_estoque();
+
+
+
+------------------------------------- ATIVIDADE/ QUERY´S ------------------------------------
+
+
+-- Update no nome de um produto do estoque
+UPDATE produto SET nome_produto = 'Produto 5' WHERE id_produto = 5;
+
+-- Delete em um cliente
+DELETE FROM cliente WHERE id_cliente = 1;
+
+-- Consulta 1: Produtos e suas categorias
+SELECT p.nome_produto, c.nome_categoria
+FROM produto p
+INNER JOIN categoria c ON p.id_categoria = c.id_categoria;
+
+-- Consulta 2: Pedidos e seus clientes
+SELECT pe.id_pedido, c.nome_cliente, pe.data_realizacao
+FROM pedido pe
+INNER JOIN cliente c ON pe.id_cliente = c.id_cliente;
+
+-- Consulta 3: Contagem de produtos por categoria
+SELECT c.nome_categoria, COUNT(p.id_produto) AS total_produtos
+FROM categoria c
+INNER JOIN produto p ON c.id_categoria = p.id_categoria
+GROUP BY c.nome_categoria;
+
+-- Consulta 4: Pedidos por status
+SELECT status, COUNT(id_pedido) AS total_pedidos
+FROM pedido
+GROUP BY status;
+
+-- Consulta 5: Produtos com estoque abaixo de um valor
+SELECT nome_produto, qtd_estoque
+FROM produto
+WHERE qtd_estoque < 150;
+
+-- Nota fiscal
+CREATE VIEW nota_fiscal AS
+SELECT 
+    pe.id_pedido,
+    pe.data_realizacao,
+    c.nome_cliente,
+    c.cpf AS cpf_cliente,
+    e.endereco_completo AS endereco_entrega,
+    p.nome_produto,
+    ip.quantidade,
+    p.valor_unitario,
+    (ip.quantidade * p.valor_unitario) AS total_produto,
+    pe.status
+FROM 
+    pedido pe
+JOIN 
+    cliente c ON pe.id_cliente = c.id_cliente
+JOIN 
+    endereco e ON c.id_cliente = e.id_cliente
+JOIN 
+    item_pedido ip ON pe.id_pedido = ip.id_pedido
+JOIN 
+    produto p ON ip.id_produto = p.id_produto;
+<<<<<<< HEAD
+
+SELECT * from nota_fiscal where id_pedido = 1;
+=======
+   
+SELECT * from nota_fiscal where id_pedido = 1;
+>>>>>>> refs/remotes/origin/main
