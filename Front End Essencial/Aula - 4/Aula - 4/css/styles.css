@@ -1,0 +1,14 @@
+* {
+    font-family: Arial;
+}
+
+#ButtonSomar{
+    padding: 10px 20px;
+    background-color: red;
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

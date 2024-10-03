@@ -1,0 +1,120 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #201b2d;
+    height: 100vh;
+}
+
+#cartao {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #2f2942;
+    width: 400px;
+    height: 400px;
+}
+
+#tituloLogin {
+    font-size: 40px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    margin-bottom: 10px;
+    color: #06ff89;
+    text-shadow: 0 0 12px #06ff89;
+}
+
+#subTitulo  {
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+}
+
+#formas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+.tituloInput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 230px;
+    color: #afb3bb;
+}
+
+.estiloInput {
+    font-family: Arial;
+    margin-bottom: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-color: #514768;
+    text-indent: 30px;
+    height: 40px;
+    width: 280px;
+
+}
+
+::placeholder{
+    color: #afb3bb;
+}
+
+#iconePerfil {
+    position: absolute;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 0px 7px;
+}
+
+#iconeCadeado {
+    position: absolute;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 0px 7px;
+}
+
+.entrar{
+    color: #afb3bb;
+    margin-bottom: 20px;
+}
+
+#criarConta {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+#botaoEntrar{
+    margin-bottom: 20px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #06ff89;
+    color: #141d43;
+    box-shadow: 0 0 15px #06ff89;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+

@@ -1,0 +1,189 @@
+[33mcommit d8aec23fc73dc3a85ffa548012fb8d5ad172ae94[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmeusdados-feature[m[33m)[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Wed Sep 18 11:41:11 2024 -0300
+
+    ajustes bomboniere + cores
+
+[33mcommit e327f60dedf35e0fd274c85684a03d3f9fe0fa80[m[33m ([m[1;31morigin/meusdados-feature[m[33m)[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:57:26 2024 -0300
+
+    Ajuste /n
+
+[33mcommit 0c55d778b749e0b747da2550828665e3bd47d543[m
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:51:33 2024 -0300
+
+    Update Populacao.java
+
+[33mcommit 9413b7011395598028133e0d19f83115552eea48[m
+Merge: 3ff10f8 959b706
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:50:35 2024 -0300
+
+    Merge pull request #8 from poo-gerenciamentodecinema/meusdados-feature
+    
+    Meusdados feature
+
+[33mcommit 959b706bed8bcc53e291d5082b259e6526e2a3b7[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:48:43 2024 -0300
+
+    populacao ajuste
+
+[33mcommit 3ff10f88d444120ee630b826e2443662b33c8442[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 991ffe1 78eb128
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:22:37 2024 -0300
+
+    Merge pull request #7 from poo-gerenciamentodecinema/gitdifi-1
+    
+    ajuste em relatorios > bomboniere
+
+[33mcommit 78eb1283d3c0bbe01c179172fb5cdb53b03faed8[m[33m ([m[1;31morigin/gitdifi-1[m[33m)[m
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:22:26 2024 -0300
+
+    ajuste em relatorios > bomboniere
+
+[33mcommit 991ffe1556438e65133917b8e641d7c709523d72[m
+Merge: db6e05d 063753a
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:20:10 2024 -0300
+
+    Merge pull request #6 from poo-gerenciamentodecinema/gitdifi
+    
+    ajuste em relatorios > bomboniere
+
+[33mcommit 063753a7909593f2dd15d327dfcf43e48143adf0[m[33m ([m[1;31morigin/gitdifi[m[33m)[m
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:19:47 2024 -0300
+
+    ajuste em relatorios > bomboniere
+
+[33mcommit 2dd2ea112c800bf69a9486bd102226448c4a10ef[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:14:32 2024 -0300
+
+    'Meus dados' + ajuste relatorio bomboniere
+
+[33mcommit db6e05d205d896ab10789355491047665bca2341[m
+Merge: e21408d 86178ee
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:11:30 2024 -0300
+
+    Merge pull request #5 from poo-gerenciamentodecinema/meusdados-feature
+    
+    Meusdados feature
+
+[33mcommit 86178eee7ee71ee919b3a4e09cf046268b0adf6f[m[33m ([m[1;32mbomboniere-feature[m[33m)[m
+Merge: 67460f0 e21408d
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Tue Sep 17 12:07:40 2024 -0300
+
+    local changes
+
+[33mcommit 67460f03bcb4d22a90b4c61bed2b436d224b173d[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 22:01:07 2024 -0300
+
+    cor
+
+[33mcommit e21408d55776ca2da6f883361e527446296d6ccd[m
+Merge: bba5eca c001d91
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 21:54:21 2024 -0300
+
+    Merge pull request #4 from poo-gerenciamentodecinema/loginperfil
+    
+    Atualização de Login
+
+[33mcommit c001d917a1ea5ace96e99c496a93a23e2c0ebb3d[m[33m ([m[1;31morigin/loginperfil[m[33m)[m
+Merge: e995fc3 bba5eca
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 21:54:12 2024 -0300
+
+    Merge branch 'main' into loginperfil
+
+[33mcommit e995fc3176e5c23f6e811594cd335697b6d6e879[m
+Author: elipekkkj <luiscaetano18180909@gmail.com>
+Date:   Mon Sep 16 21:43:39 2024 -0300
+
+    Atualização de Login
+
+[33mcommit bba5ecaa1b8fa7bf7c1169601d8a47acdbbdeb22[m
+Merge: dcae9b4 f029b60
+Author: Felipe-Goncalves-Lima <felipedelima341@gmail.com>
+Date:   Mon Sep 16 21:16:16 2024 -0300
+
+    Merge branch 'main' of https://github.com/poo-gerenciamentodecinema/cinema.managementsystem
+
+[33mcommit dcae9b4f8561a2c72af638e677f1caa60b1966ea[m
+Author: Felipe-Goncalves-Lima <felipedelima341@gmail.com>
+Date:   Mon Sep 16 21:08:57 2024 -0300
+
+    iniciando o compra ingresso
+
+[33mcommit f029b607879d7dbc4c7845dd801c729eedbbd821[m
+Merge: e30c36f cdedb8f
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 20:08:53 2024 -0300
+
+    Merge pull request #3 from poo-gerenciamentodecinema/filmes
+    
+    Filmes
+
+[33mcommit cdedb8f99967dcb67578076d0eda627658c45766[m[33m ([m[1;31morigin/filmes[m[33m)[m
+Merge: 262bbe7 e30c36f
+Author: lari-blip <anunciacaoteodor@gmail.com>
+Date:   Mon Sep 16 20:05:40 2024 -0300
+
+    Filmes
+
+[33mcommit 262bbe7b9f42e4c2c3b26838928d45b2b451f0fe[m
+Author: lari-blip <anunciacaoteodor@gmail.com>
+Date:   Mon Sep 16 19:57:02 2024 -0300
+
+    Atualização de Filmes
+
+[33mcommit e30c36fbe4bce73d9faccb61b07d68424481488f[m
+Merge: 82c0997 c0715cb
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 18:29:08 2024 -0300
+
+    Merge pull request #2 from poo-gerenciamentodecinema/loginperfil
+    
+    Login e Senha
+
+[33mcommit c0715cb0413913465c1508219124ea83bf87266e[m
+Author: elipekkkj <luiscaetano18180909@gmail.com>
+Date:   Mon Sep 16 17:12:16 2024 -0300
+
+    Login e Senha
+
+[33mcommit 82c0997a338b4311eac52d84da41088e16352261[m
+Merge: 8af7152 fab6218
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 14:13:42 2024 -0300
+
+    Merge pull request #1 from poo-gerenciamentodecinema/bomboniere-feature
+    
+    Bomboniere features + visual
+
+[33mcommit fab6218f5d75dde26fd27577795afe51cb026404[m[33m ([m[1;31morigin/bomboniere-feature[m[33m)[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Mon Sep 16 14:04:29 2024 -0300
+
+    Bomboniere features + visual
+
+[33mcommit 8af71527d1f26aeae8b7b61b17db7ee578bdfe5a[m
+Author: thaiscardosomello <thais.cardoso.mello@gmail.com>
+Date:   Sat Sep 14 10:54:24 2024 -0300
+
+    base projeto em java
+
+[33mcommit 9559d2d3201f9565df84a106d2e5c2eade745e0a[m
+Author: Thais Cardoso de Mello <thais.cardoso.mello@gmail.com>
+Date:   Sat Sep 14 10:47:18 2024 -0300
+
+    primeiro commit

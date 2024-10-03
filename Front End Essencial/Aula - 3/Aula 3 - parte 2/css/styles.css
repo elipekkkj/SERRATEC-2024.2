@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+#container {
+    background-color: #EFC6C0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 0.5px solid #ddd;
+    background: linear-gradient(to right, #0D8D8C, #4D427C);
+    width: 400px;
+    height: 400px;
+    /* box-shadow: inset 0px; */
+}
+
+#titleLogin {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#forms {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleInput {
+    color: #fff;
+    font-size: 15px;
+    align-self: flex-start;
+}
+
+.styleInput {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    height: 30px;
+    border: none;
+    width: 100%;
+}
+
+#buttonLogin{
+    background-color: #3E97D3;
+    color: #fff;
+    border: none;
+    padding: 10px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 15px;
+}
