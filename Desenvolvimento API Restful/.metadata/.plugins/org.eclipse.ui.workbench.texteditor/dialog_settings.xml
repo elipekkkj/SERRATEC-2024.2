@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="replacehistory">
+		<item value="Servico"/>
+		<item value="Manutencao"/>
+		<item value="Proprietario"/>
+		<item value="Combustivel.values()"/>
+		<item value="Combustivel c"/>
+		<item value="Combustivel"/>
+		<item value="Veiculo v"/>
+		<item value="v"/>
+		<item value="veiculos"/>
+		<item value="Veiculo"/>
+		<item value="VeiculoController"/>
+		<item value="VeiculoRepository"/>
+	</list>
+	<list key="searchhistory">
+		<item value="Manutencao"/>
+		<item value="Proprietario"/>
+		<item value="Veiculo"/>
+		<item value="Categoria.values()"/>
+		<item value="Categoria c"/>
+		<item value="Categoria"/>
+		<item value="Veiculo p"/>
+		<item value="p"/>
+		<item value="produtos"/>
+		<item value="Produto"/>
+		<item value="ProdutoController"/>
+		<item value="ProdutoRepository"/>
+		<item value="Cliente"/>
+		<item value="ClienteRepository"/>
+	</list>
+</section>

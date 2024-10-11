@@ -1,0 +1,21 @@
+package br.com.serratec.entity;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Consulta {
+	
+	private LocalDate dataConsulta;
+	private LocalTime horaConsulta;
+	
+	@Embedded
+	private Paciente paciente;
+	
+	@Embedded
+	private Medico medico;
+	
+}

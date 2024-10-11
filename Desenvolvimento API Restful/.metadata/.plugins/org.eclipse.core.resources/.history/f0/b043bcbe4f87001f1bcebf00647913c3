@@ -1,0 +1,10 @@
+package br.com.serratec.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class PessoaFisica extends Fornecedor {
+	private String rg;
+	private String orgaoEmissor;
+	private String cpf;
+}

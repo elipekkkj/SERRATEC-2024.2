@@ -1,0 +1,15 @@
+package br.com.serratec.entity;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Consulta {
+	
+	private LocalDate dataConsulta;
+	private LocalTime horaConsulta;
+	
+	
+}

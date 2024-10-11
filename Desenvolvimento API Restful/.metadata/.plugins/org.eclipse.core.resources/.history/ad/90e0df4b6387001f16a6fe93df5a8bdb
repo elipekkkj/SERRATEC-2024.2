@@ -1,0 +1,9 @@
+package br.com.serratec.controller;
+
+public class PacienteController {
+
+	public PacienteController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

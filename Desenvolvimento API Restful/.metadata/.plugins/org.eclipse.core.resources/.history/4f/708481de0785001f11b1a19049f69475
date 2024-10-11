@@ -1,0 +1,10 @@
+package br.com.serratec.entity;
+
+public class Cliente {
+	private Long id;
+	private String nome;
+	private String cpf;
+	private String email;
+	
+	
+}

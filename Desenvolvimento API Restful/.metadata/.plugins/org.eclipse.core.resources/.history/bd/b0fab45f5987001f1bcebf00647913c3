@@ -1,0 +1,17 @@
+package br.com.serratec.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.Email;
+
+@Entity
+public class Paciente {
+	
+	private Long id;
+	@Column(nullable = )
+	private String nome;
+	
+	@Email(message = "E-mail inválido, preencha o campo corretamente")
+	private String email;
+	private String telefone;
+}

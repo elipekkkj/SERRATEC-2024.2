@@ -1,0 +1,9 @@
+package br.com.serratec.controller;
+
+public class ConsultaController {
+
+	public ConsultaController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

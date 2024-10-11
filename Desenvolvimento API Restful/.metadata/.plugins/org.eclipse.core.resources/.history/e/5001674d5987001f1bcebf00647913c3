@@ -1,0 +1,15 @@
+package br.com.serratec.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.Email;
+
+@Entity
+public class Paciente {
+	
+	private Long id;
+	private String nome;
+	
+	@Email(message = "")
+	private String email;
+	private String telefone;
+}

@@ -1,0 +1,8 @@
+package br.com.serratec.entity;
+
+public class PessoaJuridica extends Fornecedor{
+	
+	private String cnpj;
+	private String inscricaoEstadual;
+	private String razaoSocial;
+}

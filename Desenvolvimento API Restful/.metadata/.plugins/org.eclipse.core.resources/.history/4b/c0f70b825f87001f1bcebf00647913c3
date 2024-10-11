@@ -1,0 +1,8 @@
+package br.com.serratec.enums;
+
+public enum StatusEnum {
+	Aguardando(1, "Aguardando"), Em_Atendimento(2, "Em Atendimento"), Atendido(3, "")
+	
+	private Long codigo;
+	private String status;
+}

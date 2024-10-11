@@ -1,0 +1,9 @@
+package br.com.serratec.entity;
+
+public class Medico {
+
+	public Medico() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

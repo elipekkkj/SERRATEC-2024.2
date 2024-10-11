@@ -1,0 +1,6 @@
+package br.com.serratec.entity;
+
+@Em
+public class Endereco {
+	
+}

@@ -1,0 +1,12 @@
+package br.com.serratec.enums;
+
+public enum Categoria {
+	SUV, SUV_COMPACTO, PICAPE, SEDAN, HATCH, CONVERSIVEL, ESPORTIVO, COUPE 
+	
+	
+	public static Categoria verificar(String value) {
+		for (Categoria c : Categoria.values()) {
+			
+		}
+	}
+}
