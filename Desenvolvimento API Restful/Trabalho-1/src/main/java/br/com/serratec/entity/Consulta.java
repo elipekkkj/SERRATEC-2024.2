@@ -3,6 +3,8 @@ package br.com.serratec.entity;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import br.com.serratec.enums.StatusEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -26,6 +28,7 @@ public class Consulta {
 	@Enumerated(EnumType.ORDINAL)
 	private StatusEnum status;
 	
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "id_paciente")
 	private Paciente paciente;
@@ -33,6 +36,14 @@ public class Consulta {
 	@ManyToOne
 	@JoinColumn(name = "id_medico")
 	private Medico medico; 
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public LocalDate getDataConsulta() {
 		return dataConsulta;

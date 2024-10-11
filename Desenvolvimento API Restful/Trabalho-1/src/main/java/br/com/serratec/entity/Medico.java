@@ -7,6 +7,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Embeddable
@@ -18,13 +20,17 @@ public class Medico {
 	private Long crm;
 	private String especialidade;
 	
+	@NotBlank(message = "Preencha o campo corretamente")
 	@Column(nullable = false, length = 60)
 	private String nome;
 	
 	@Email(message = "E-mail inválido, preencha o campo corretamente")
+	@NotBlank(message = "Preencha o campo corretamente")
 	private String email;
 	
-	@Column(nullable = false, length = 11)
+	@Pattern(regexp = "^\\(\\d{2}\\) 9\\d{4}-\\d{4}$",
+			message = "Preencha o campo de telefone corretamente")
+    @Column(nullable = false)
 	private String telefone;
 
 	public Long getId() {

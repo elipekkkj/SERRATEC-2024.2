@@ -3,6 +3,8 @@ package br.com.serratec.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 public class Paciente {
@@ -28,11 +30,13 @@ public class Paciente {
 	@NotBlank(message = "Preencha o campo corretamente")
 	private String email;
 	
-	@Column(nullable = false, length = 11)
-	@Size(max = 11, min = 11)
-    @NotBlank(message = "Preencha o campo corretamente")
+
+    @Pattern(regexp = "^\\(\\d{2}\\) 9\\d{4}-\\d{4}$", 
+    		message = "Preencha o campo de telefone corretamente")
+    @Column(nullable = false)
 	private String telefone;
 	
+    @JsonManagedReference
 	@OneToMany(mappedBy = "paciente")
 	private List<Consulta> consultas = new ArrayList<>();
 

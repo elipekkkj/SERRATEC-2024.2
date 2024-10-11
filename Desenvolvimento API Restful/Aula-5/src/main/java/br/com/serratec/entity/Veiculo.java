@@ -46,7 +46,6 @@ public class Veiculo {
 	@JsonManagedReference
 	@OneToMany(mappedBy = "veiculo")
 	private  List<Manutencao> manutencoes = new ArrayList<>();
-
 	
 	public String getMarca() {
 		return marca;
