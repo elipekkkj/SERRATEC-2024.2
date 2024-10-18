@@ -1,7 +1,0 @@
-package br.com.serratec.repository;
-
-import br.com.serratec.entity.Paciente;
-
-public class PacienteRepository extends JpaRepository<Paciente, Long>{
-
-}

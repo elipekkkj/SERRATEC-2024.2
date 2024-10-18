@@ -1,5 +1,0 @@
-package br.com.serratec.enums;
-
-public enum Combustivel {
-	FLEX(1,"FLEX"), GASOLINA(2,"GASOLINA"),
-}

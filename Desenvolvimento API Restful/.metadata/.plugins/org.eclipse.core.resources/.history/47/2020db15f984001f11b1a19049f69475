@@ -1,8 +1,0 @@
-package br.com.serratec.entity;
-
-public class Consulta {
-	
-	public double calcularConsulta(Double valor) {
-		return valor *= 1.10; 
-	}
-}

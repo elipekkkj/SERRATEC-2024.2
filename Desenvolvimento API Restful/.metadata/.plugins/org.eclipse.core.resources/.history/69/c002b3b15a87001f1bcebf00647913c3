@@ -1,9 +1,0 @@
-package br.com.serratec.repository;
-
-public class PacienteRepository {
-
-	public PacienteRepository() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

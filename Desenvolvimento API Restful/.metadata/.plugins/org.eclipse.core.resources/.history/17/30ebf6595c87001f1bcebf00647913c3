@@ -1,8 +1,0 @@
-package br.com.serratec.repository;
-
-import br.com.serratec.entity.Paciente;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface MedicoRepository extends JpaRepository<Paciente, Long>{
-
-}

@@ -150,3 +150,18 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 50 more
+2024-10-15 21:08:44.757890-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIPI_ESPECIALIZACAO" not found; SQL statement:
+select * from tipi_especializacao [42102-224]
+2024-10-15 21:08:50.845875-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIPO_ESPECIALIZACAO" not found; SQL statement:
+select * from tipo_especializacao [42102-224]
+2024-10-15 21:09:05.928878-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIPO_ESPECIALIZACAO" not found; SQL statement:
+SELECT * FROM TIPO_ESPECIALIZACAO [42102-224]
+2024-10-15 21:09:06.786877-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIPO_ESPECIALIZACAO" not found; SQL statement:
+SELECT * FROM TIPO_ESPECIALIZACAO [42102-224]
+2024-10-15 21:10:59.601246-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIPO_ESPECIALIZACAO" not found; SQL statement:
+SELECT * FROM TIPO_ESPECIALIZACAO [42102-224]

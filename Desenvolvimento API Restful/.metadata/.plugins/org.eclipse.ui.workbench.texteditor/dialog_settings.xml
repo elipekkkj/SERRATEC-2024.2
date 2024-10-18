@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="replacehistory">
+		<item value="Perfil"/>
+		<item value="LancamentoVendasResponseDTO"/>
 		<item value="Servico"/>
 		<item value="Manutencao"/>
 		<item value="Proprietario"/>
@@ -17,6 +19,9 @@
 		<item value="VeiculoRepository"/>
 	</list>
 	<list key="searchhistory">
+		<item value="usuario"/>
+		<item value="Usuario"/>
+		<item value="UsuarioRequestDTO"/>
 		<item value="Manutencao"/>
 		<item value="Proprietario"/>
 		<item value="Veiculo"/>
@@ -29,7 +34,5 @@
 		<item value="Produto"/>
 		<item value="ProdutoController"/>
 		<item value="ProdutoRepository"/>
-		<item value="Cliente"/>
-		<item value="ClienteRepository"/>
 	</list>
 </section>
