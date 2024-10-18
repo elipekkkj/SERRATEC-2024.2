@@ -1,7 +1,9 @@
 package br.com.serratec.entity;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
+@DiscriminatorValue("VA")
 @Entity
 public class VendedorAutonomo extends Vendedor {
 

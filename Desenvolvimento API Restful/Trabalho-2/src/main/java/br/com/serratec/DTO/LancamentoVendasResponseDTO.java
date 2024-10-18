@@ -8,16 +8,12 @@ public class LancamentoVendasResponseDTO {
 	private LocalDate data;
 	private Double valor;
 	private String nomeVendedor;
-	
-	public LancamentoVendasResponseDTO(LancamentoVendas lancamentoVendas) {
-		super();
-		this.data = lancamentoVendas.getData();
-		this.valor = lancamentoVendas.getValor();
-		this.nomeVendedor = lancamentoVendas.getVendedor().getNome();
-	}
 
-	public LancamentoVendasResponseDTO(LocalDate data2, Double valor2, String nome) {
-	}
+    public LancamentoVendasResponseDTO(LancamentoVendas lancamentoVendas) {
+        this.data = lancamentoVendas.getData();
+        this.valor = lancamentoVendas.getValor();
+        this.nomeVendedor = lancamentoVendas.getVendedor().getNome();
+    }
 
 	public LocalDate getData() {
 		return data;
