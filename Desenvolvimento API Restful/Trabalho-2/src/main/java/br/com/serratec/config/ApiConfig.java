@@ -38,8 +38,8 @@ public class ApiConfig{
 		
 		License apacheLicense = new License().name("Apache").url("https://www.apache.org/licenses/LICENSE-2.0");
 		
-		Info info = new Info().title("API TRABALHO 2").version("1.0").contact(contact)
-				.description("API PARA TRABALHO").termsOfService("https://www.serratec.com.br")
+		Info info = new Info().title("API DE VENDAS - TRABALHO 2").version("1.0").contact(contact)
+				.description("API DE TRABALHO - SERRATEC").termsOfService("https://www.serratec.com.br")
 				.license(apacheLicense);
 		
 		return new OpenAPI().info(info).servers(List.of(devServer, prodServer));
