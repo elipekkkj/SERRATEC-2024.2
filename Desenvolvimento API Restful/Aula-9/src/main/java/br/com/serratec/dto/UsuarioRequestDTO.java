@@ -10,6 +10,8 @@ public class UsuarioRequestDTO {
 	private String nome;
 	private String email;
 	private String senha;
+	private String cep;
+	
 	private Set<UsuarioPerfil> usuarioPerfis = new HashSet<>();
 	
 	public UsuarioRequestDTO() {
@@ -27,6 +29,14 @@ public class UsuarioRequestDTO {
 		return usuarioPerfis;
 	}
 	
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
 	public String getSenha() {
 		return senha;
 	}
